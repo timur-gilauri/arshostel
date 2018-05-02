@@ -1,0 +1,15 @@
+@import "./../vendors/fancybox/jquery.fancybox";
+@import "./../vendors/icomoon/style";
+// Variables
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "mixins";
+@import "extends";
+@import "base";
+@import "./navbar/navbar";
+@import "./navbar/mobile-navbar";
+@import "header";
+@import "sliders";
+@import "advantages";
+@import "responsive";
+@import "map";

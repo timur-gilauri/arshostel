@@ -1,0 +1,7 @@
+// Стили для печати
+@media print {
+  header, footer {
+    display: none;
+  }
+
+}

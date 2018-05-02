@@ -1,0 +1,31 @@
+@mixin rounded-btn($height: 60px, $bg-color: $cyan, $border-color: $cyan, $color: $white) {
+  height: $height;
+  line-height: $height;
+  display: block;
+  margin: auto;
+  padding: 0 30px;
+  position: relative;
+  border: transparent;
+  border-radius: 100px;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  background-color: $bg-color;
+  color: $color;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-sizing: content-box;
+}
+
+@mixin round-circle($size: 100px, $color: $info, $border-color: $info) {
+  $iconFontSize: $size * 0.4;
+  width: $size;
+  height: $size;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: $color;
+  border: 1px solid $border-color;
+  line-height: $size;
+  font-size: $iconFontSize;
+}

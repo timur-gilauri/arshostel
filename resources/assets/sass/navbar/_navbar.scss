@@ -1,0 +1,42 @@
+$navbarHeight: 60px;
+$navbarFontSize: 16px;
+.navbar {
+  height: $navbarHeight;
+  padding: 0 15px !important;
+  font-size: $navbarFontSize;
+  .navbar-brand {
+    height: $navbarHeight;
+    padding: 0;
+    line-height: $navbarHeight;
+  }
+  .navbar-nav {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    height: $navbarHeight;
+    line-height: $navbarHeight;
+    flex-direction: row;
+    .nav-item {
+      height: 100%;
+      line-height: inherit;
+      padding: 0 15px !important;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: inherit;
+    }
+  }
+  .navbar-phone-btn {
+    @include rounded-btn($height: 40px, $bg-color: $cyan, $border-color: $cyan);
+    font-size: inherit !important;
+    margin: 0;
+    margin-left: 15px;
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+      background-color: $primary !important;
+    }
+    i {
+      margin-right: 15px;
+    }
+  }
+}

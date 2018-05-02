@@ -1,0 +1,66 @@
+@import "hamburger";
+
+$navbarHeight: 60px;
+
+.mobile-navbar__wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 0 !important;
+  background-color: #f8f8f8;
+
+  .mobile-navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: $navbarHeight;
+    line-height: $navbarHeight;
+    padding: 0 15px;
+  }
+
+  .mobile-nav__phone-btn {
+    @include rounded-btn($height: 20px, $bg-color: $cyan, $border-color: $cyan);
+    padding: 10px;
+    font-size: 14px !important;
+    margin: 0;
+    margin-left: auto;
+    &:hover {
+      text-decoration: none;
+      background-color: $primary !important;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .menu-wrapper {
+    position: absolute;
+    top: $navbarHeight;
+    left: 0;
+    width: 100%;
+    .mobile-menu {
+      display: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      .nav-item {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        border: 1px solid $border-color;
+        font-size: 16px;
+        cursor: pointer;
+        & + .nav-item {
+          border-top: none;
+        }
+        i {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+}

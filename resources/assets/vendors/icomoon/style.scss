@@ -1,0 +1,128 @@
+@import "variables";
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('#{$icomoon-font-path}/icomoon.eot?70rj5k');
+  src: url('#{$icomoon-font-path}/icomoon.eot?70rj5k#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/icomoon.ttf?70rj5k') format('truetype'),
+  url('#{$icomoon-font-path}/icomoon.woff?70rj5k') format('woff'),
+  url('#{$icomoon-font-path}/icomoon.svg?70rj5k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-location {
+  &:before {
+    content: unicode($icon-location);
+  }
+}
+
+.icon-parking {
+  &:before {
+    content: unicode($icon-parking);
+  }
+}
+
+.icon-shower {
+  &:before {
+    content: unicode($icon-shower);
+  }
+}
+
+.icon-mop {
+  &:before {
+    content: unicode($icon-mop);
+  }
+}
+
+.icon-wash {
+  &:before {
+    content: unicode($icon-wash);
+  }
+}
+
+.icon-microwave {
+  &:before {
+    content: unicode($icon-microwave);
+  }
+}
+
+.icon-percent {
+  &:before {
+    content: unicode($icon-percent);
+  }
+}
+
+.icon-home {
+  &:before {
+    content: unicode($icon-home);
+  }
+}
+
+.icon-images {
+  &:before {
+    content: unicode($icon-images);
+  }
+}
+
+.icon-connection {
+  &:before {
+    content: unicode($icon-connection);
+  }
+}
+
+.icon-profile {
+  &:before {
+    content: unicode($icon-profile);
+  }
+}
+
+.icon-compass {
+  &:before {
+    content: unicode($icon-compass);
+  }
+}
+
+.icon-clock {
+  &:before {
+    content: unicode($icon-clock);
+  }
+}
+
+.icon-tv {
+  &:before {
+    content: unicode($icon-tv);
+  }
+}
+
+.icon-gift {
+  &:before {
+    content: unicode($icon-gift);
+  }
+}
+
+.icon-star-empty {
+  &:before {
+    content: unicode($icon-star-empty);
+  }
+}
+

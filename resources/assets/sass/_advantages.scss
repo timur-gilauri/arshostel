@@ -1,0 +1,12 @@
+$advantagesSize: 100px;
+$iconFontSize: $advantagesSize * 0.4;
+.advantages {
+  &-item {
+    &__img {
+      @include round-circle();
+    }
+    &__text {
+      font-weight: 600;
+    }
+  }
+}

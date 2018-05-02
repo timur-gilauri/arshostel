@@ -1,0 +1,93 @@
+@mixin light {
+}
+
+@mixin dark {
+}
+
+@mixin border-top {
+}
+
+@mixin border-bot {
+}
+
+@mixin align-left {
+  text-align: left;
+}
+
+@mixin align-center {
+  text-align: center;
+}
+
+@mixin align-right {
+  text-align: right;
+}
+
+@mixin logo {
+}
+
+@mixin margin {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin nomarker {
+  list-style: none;
+  li:before {
+    display: none;
+  }
+}
+
+@mixin semibold {
+  font-weight: 500;
+}
+
+@mixin hidden_element {
+  display: none;
+}
+
+@mixin opacity($op: 1) {
+  opacity: $op;
+}
+
+@mixin c_inner_absolute(
+  $width: auto,
+  $height: auto,
+  $min-height: 100vh,
+  $min-width: 100vw) {
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+  min-width: $min-width;
+  min-height: $min-height;
+  overflow: hidden;
+  position: absolute;
+}
+
+@mixin transition($t: 0.5s) {
+  -webkit-transition: all $t linear;
+  -moz-transition: all $t linear;
+  -ms-transition: all $t linear;
+  -o-transition: all $t linear;
+  transition: all $t linear;
+}
+
+@mixin filter($effect: blur(5x)) {
+  -webkit-filter: $effect;
+  -moz-transition: $effect;
+  -ms-transition: $effect;
+  -o-transition: $effect;
+  transition: $effect;
+}
+
+@mixin double-gradient($startColor, $endColor, $startPosition: 0%, $nedPosition: 100%) {
+  background: $startColor;
+  background: -moz-linear-gradient(top, $startColor $startPosition, $endColor $nedPosition);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($startPosition, $startColor), color-stop($nedPosition, $endColor));
+  background: -webkit-linear-gradient(top, $startColor $startPosition, $endColor $nedPosition);
+  background: -o-linear-gradient(top, $startColor $startPosition, $endColor $nedPosition);
+  background: -ms-linear-gradient(top, $startColor $startPosition, $endColor $nedPosition);
+  background: linear-gradient(to bottom, $startColor $startPosition, $endColor $nedPosition);
+  filter: #{"progid:DXImageTransform.Microsoft.gradient( startColorstr="$startColor", endColorstr="$endColor", GradientType=0)"};
+  /* IE6-9 */
+}

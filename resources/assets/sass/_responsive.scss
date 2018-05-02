@@ -1,0 +1,121 @@
+@media (max-width: 1119px) {
+  .navbar {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+  .mobile-navbar__wrapper {
+    display: block;
+  }
+
+  header,
+  section {
+    /*padding: 3.125rem 0;
+        border: 10px solid red;*/
+  }
+  h1 {
+    font-size: $h1_size * $media_64_multiplier;
+  }
+  h2 {
+    font-size: $h2_size * $media_64_multiplier;
+  }
+  h3 {
+    font-size: $h3_size * $media_64_multiplier;
+  }
+}
+
+@media (max-width: 800px) {
+  header,
+  section {
+    /*border: 10px solid blue;*/
+  }
+  section {
+    padding-top: $section_top_padding * $media_50_multiplier;
+    padding-bottom: $section_bottom_padding * $media_50_multiplier;
+  }
+  h1 {
+    font-size: $h1_size * $media_50_multiplier;
+  }
+  h2 {
+    font-size: $h2_size * $media_50_multiplier;
+  }
+  h3 {
+    font-size: $h3_size * $media_50_multiplier;
+  }
+}
+
+@media (max-width: 640px) {
+  header,
+  section {
+    /*border: 10px solid white; */
+  }
+  section {
+    padding-top: $section_top_padding * $media_39_multiplier;
+    padding-bottom: $section_bottom_padding * $media_39_multiplier;
+  }
+  h1 {
+    font-size: $h1_size * $media_39_multiplier;
+  }
+  h2 {
+    font-size: $h2_size * $media_39_multiplier;
+  }
+  h3 {
+    font-size: $h3_size * $media_39_multiplier;
+  }
+
+  .advantages {
+    &-item__img {
+      @include round-circle($size: 80px);
+    }
+    &-item {
+      .title {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .reviews {
+    .reviews-item {
+      &__content {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px), (max-height: 480px) {
+  .header {
+    .header-wrapper {
+      h1 {
+        font-size: 2rem !important;
+      }
+      a.action {
+        height: 40px !important;
+        line-height: 40px !important;
+      }
+    }
+  }
+  section.map {
+    max-height: 70%;
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    h3 {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 420px), (max-height: 420px) {
+  .small-controls {
+    display: block;
+  }
+  .bx-controls:not(.small-controls) {
+    display: none;
+  }
+}

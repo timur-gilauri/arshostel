@@ -1,0 +1,347 @@
+@import "./../fonts/Roboto";
+@import "./../fonts/RobotoSlab";
+
+$font: 'Roboto Slab', serif;
+$mainfont: 'Open Sans', Helvetica, Arial, sans-serif;
+
+$headerfont: $font; // Заголовок на первом экране
+$h2font: $font; // Заголовки 2 уровня (основные)
+$h3font: $mainfont; // Заголовки 3 уровня (подзаголовки)
+$introtextfont: $mainfont; // Вступительный текст на первом экране
+$textfont: $mainfont; //Основной текст
+$notefont: $mainfont; //Примечания
+$textaccentfont: $mainfont; //Выделенный текст
+$captionfont: $font; //Заголовки в блоках
+$impactfont: $font; //Цитата, отдельный текст с выделением, выноска
+$menufont: $mainfont; //Меню
+$logofont: $mainfont; //Логотип на первом экране
+$phonefont: $font; //Телефон на первом экране
+$buttonfont: $mainfont; //Кнопка
+$footerfont: $mainfont; //Футер
+$tablefont: $mainfont; //Таблицы
+$developerfont: $mainfont; //Разрабочик
+$reviewfont: 'Georgia', 'Times New Roman', serif; //Отзыв
+$reviewauthorfont: $mainfont; //Отзыв
+
+// COLORS
+$header_color: #D8D8D8; // Цвет фона блока с картинкой на весь экран
+$white_color: #FFFFFF;
+$black_color: #000000;
+
+// LIGHT SCHEME
+$bordercolor_light: #D8D8D8; //Граница секции
+$section_bg_light: #F3F5F7; //Фон секции
+$h1_color_light: #263238; //Заголовок 1 уровня
+$h2_color_light: #263238; //Заголовок 2 уровня
+$h3_color_light: #00838F; //Заголовок 3 уровня
+$introtext_color_light: #263238; //Вступительный текст на первом экране
+$title_color_light: #263238; //Заголовок тригеров и блоков
+$logo_color_light: #263238; //Логотип / название сайта на первом экране
+$phone_color_light: #263238; //Телефон на первом экране
+$hr_color_light: #CFD8DC; //Разделитель
+$text_color_light: #353535; //Текст
+$a_color_light: #00838F; //Ссылка
+$a_hover_light: #000000; //Ссылка при наведении
+$menuitem_color_light: #00838F; //Элемент меню
+$menuitem_hover_light: #000000; //Элемент меню при наведении
+$menu_bg_light: rgba(255, 255, 255, 0.2); //Фон верхнего меню
+$accenttext_color_light: #000000; //Выделеный текст
+$note_color_light: #6C6C6C; //Примечание
+$caption_color_light: #6C6C6C; //Заголовок блока
+$impact_color_light: #000000; //Цитата, выноска
+$listmarker_color_light: #00838F; //Маркер ненумерованного списка
+$mask_color_light: rgba(255, 255, 255, 0.4); //Маска для изображений, применяется на первом экране, тонирует изображение (высветляет)
+$round_block_border_light: #CFD8DC; //Граница круглого блока
+$button_textcolor_light: #00838F; //Текст кнопки
+$button_border_light: #00838F; //Граница кнопки
+$button_bg_light: transparent; //Фон кнопки
+$button_textcolor_hover_light: #FFFFFF; //Текст кнопки при наведении
+$button_border_hover_light: #00838F; //Граница кнопки при наведении
+$button_bg_hover_light: #00838F; //Фон кнопки при наведении
+$calltoaction_textcolor_light: #FFFFFF; //Текст кнопки повышенного внимания
+$calltoaction_border_light: #00838F; //Граница кнопки повышенного внимания
+$calltoaction_bg_light: #00838F; //Фон кнопкит повышенного внимания
+$calltoaction_textcolor_hover_light: #FFFFFF; //Текст кнопки повышенного внимания при наведении
+$calltoaction_border_hover_light: #263238; //Граница кнопки повышенного внимания при наведении
+$calltoaction_bg_hover_light: #263238; //Фон кнопки повышенного внимания при наведении
+$input_border_color_light: #D8D8D8; //Граница элементов формы 
+$input_bg_light: #FFFFFF; //Фон элементов формы
+$input_color_light: #263238; //Текст элементов формы
+$label_color_light: #6C6C6C; //Подпись к элементам формы
+$chek_selector_light: #FFFFFF; //Переключатель чекбокса / радиобаттона
+$chek_color_light: #00838F; //Фон чекбокса / радиобаттона в выбраном состоянии
+$unchek_color_light: #D8D8D8; //Фон чекбокса / радиобаттона в невыбраном состоянии
+$frame_color_light: #FFFFFF; //Фон рамки объекта (изображения, видео, ифрэйма и т.п.)
+$frame_border_color_light: #D8D8D8; //Граница рамки объекта (изображения, видео, ифрэйма и т.п.)
+$footer_bg_light: #E4E7E8; //Фон футера
+$fooler_color_light: #353535; //Текст в футере
+$td_bg_light: #FFFFFF; //Основной фон таблицы
+$td_bg_alt_light: #F3F5F7; //Фон четных строк в таблице
+$td_border_light: #D8D8D8; //Границы ячеек
+$td_color: #353535; //Цвет текста в ячейках
+$th_bg_light: transparent; //Фон заголовков таблицы
+$th_border_light: transparent; //Граница заголовков таблицы
+$th_color: #000000; //Цвет заголовоков таблицы
+$tf_bg_light: #E6EBEE; //Фон итогов таблицы
+$tf_border_light: #D8D8D8; //Граница итогов таблицы
+$tf_color: #000000; //Цвет текста итогов таблицы
+$developer_bg_light: #455A64; //Фон блока с информацией о разработчике
+$developer_color_light: #D9D9D9; //Цвет текста с информацией о разработчике
+$developer_bg_hover_light: #00838F; //Цвет фона блока с информацией о разработчике при наведении
+$developer_color_hover_light: #ffffff; //Цвет текста с информацией о разработчике при наведении
+$review_light: #353535; //Отзыв
+$reviewauthor_light: #6C6C6C; //Автор отзыва
+$processtep_scircle_color_light: #36A9E0; //Фон элемента с номером шага процесса
+$mapsection_text_gradient_start: rgba(255, 255, 255, .8); // Начальный цвет градиента фона текста в блоке карты
+$mapsection_text_gradient_end: rgba(255, 255, 255, 0); // Конечный цвет градиента фона текста в блоке карты
+
+// DARK SCHEME
+$bordercolor_dark: #000000; //Граница секции
+$section_bg_dark: #263238; //Фон секции
+$h1_color_dark: #FFFFFF; //Заголовок 1 уровня
+$h2_color_dark: #FFFFFF; //Заголовок 2 уровня
+$h3_color_dark: #54868B; //Заголовок 3 уровня
+$title_color_dark: #FFFFFF; //Заголовок тригеров и блоков
+$introtext_color_dark: #FFFFFF; //Вступительный текст на первом экране
+$hr_color_dark: #2F3E46; //Разделитель
+$logo_color_dark: #FFFFFF; //Логотип / название сайта на первом экране
+$phone_color_dark: #FFFFFF; //Телефон на первом экране
+$text_color_dark: #D9D9D9; //Текст
+$a_color_dark: #54868B; //Ссылка
+$a_hover_dark: #FFFFFF; //Ссылка при наведении
+$menuitem_color_dark: #C4CBCF; //Элемент меню
+$menuitem_hover_dark: #FFFFFF; //Элемент меню при наведении
+$menu_bg_dark: rgba(0, 0, 0, 0.2); //Фон верхнего меню
+$accenttext_color_dark: #FFFFFF; //Выделеный текст
+$note_color_dark: #54868B; //Примечание
+$caption_color_dark: #D9D9D9; //Заголовок блока
+$impact_color_dark: #FFFFFF; //Цитата, выноска
+$listmarker_color_dark: #54868B; //Маркер ненумерованного списка
+$mask_color_dark: rgba(0, 0, 0, 0.4); //Маска для изображений, применяется на первом экране, тонирует изображение (затемняет)
+$round_block_border_dark: #FFFFFF; //Граница круглого блока
+$button_textcolor_dark: #CFD8DC; //Текст кнопки
+$button_border_dark: #CFD8DC; //Граница кнопки
+$button_bg_dark: transparent; //Фон кнопки
+$button_textcolor_hover_dark: #263238; //Текст кнопки при наведении
+$button_border_hover_dark: #FFFFFF; //Граница кнопки при наведении
+$button_bg_hover_dark: #FFFFFF; //Фон кнопки при наведении
+$calltoaction_textcolor_dark: #CFD8DC; //Текст кнопки повышенного внимания
+$calltoaction_border_dark: #CFD8DC; //Граница кнопки повышенного внимания
+$calltoaction_bg_dark: #0097A7; //Фон кнопки повышенного внимания
+$calltoaction_textcolor_hover_dark: #FFFFFF; //Текст кнопки повышенного внимания при наведении
+$calltoaction_border_hover_dark: #FFFFFF; //Граница кнопки повышенного внимания при наведении
+$calltoaction_bg_hover_dark: #263238; //Фон кнопки повышенного внимания при наведении
+$input_border_color_dark: #CFD8DC; //Граница элементов формы
+$input_bg_dark: #314149; //Фон элементов формы
+$input_color_dark: #FFFFFF; //Текст элементов формы
+$label_color_dark: #54868B; //Подпись к элементам формы
+$chek_selector_dark: #CFD8DC; //Переключатель чекбокса / радиобаттона
+$chek_color_dark: #54868B; //Фон чекбокса / радиобаттона в выбраном состоянии
+$unchek_color_dark: #314149; //Фон чекбокса / радиобаттона в невыбраном состоянии
+$frame_color_dark: #FFFFFF; //Фон рамки объекта (изображения, видео, ифрэйма и т.п.)
+$frame_border_color_dark: #D8D8D8; //Граница рамки объекта (изображения, видео, ифрэйма и т.п.)
+$footer_bg_dark: #182126; //Фон футера
+$fooler_color_dark: #ADB6BA; //Текст в футере
+$td_bg_dark: transparent; //Основной фон таблицы
+$td_bg_alt_dark: rgba(0, 0, 0, 0.1); //Фон четных строк в таблице
+$td_border_dark: #172024; //Границы ячеек
+$td_color_dark: #D9D9D9; //Цвет текста в ячейках
+$th_bg_dark: transparent; //Фон заголовков таблицы
+$th_border_dark: transparent; //Граница заголовков таблицы
+$th_color_dark: #FFFFFF; //Цвет заголовоков таблицы
+$tf_bg_dark: #172024; //Фон итогов таблицы
+$tf_border_dark: #172024; //Граница итогов таблицы
+$tf_color_dark: #FFFFFF; //Цвет текста итогов таблицы
+$developer_bg_dark: #0D1418; //Фон блока с информацией о разработчике
+$developer_color_dark: #ADB6BA; //Цвет текста с информацией о разработчике
+$developer_bg_hover_dark: #000000; //Цвет фона блока с информацией о разработчике при наведении
+$developer_color_hover_dark: #ffffff; //Цвет текста с информацией о разработчике при наведении
+
+// SIZE, PADDING
+$basesize: 20px; // Базовый элемент используется для расчета отступов
+
+$section_top_padding: $basesize*3; //Отступ с верху секции
+$section_bottom_padding: $basesize*3; //Отступ с низу секции
+$section_top_border: 0; //Верхняя граница секции
+$section_bottom_border: 1px; //Нижняя граница секции
+$hr_height: 1px; //Высота разделителя
+$hr_length: 150px; //Длина разделителя
+$margin_small: $basesize;
+$margin_middle: $basesize*2;
+$margin_big: $basesize*3;
+
+// HEADERS and TEXT
+$headers_case: uppercase;
+
+// Заголовок 1 - Основной заголовок сайта
+
+$h1_size: 4em;
+$h1_fontweight: 400;
+$h1_letterspacing: 0.02em;
+$h1_align: left;
+$h1_case: none;
+
+//Выравнивание остальных заголовков
+$headers_align: center;
+
+// Заголовок 2
+$h2_size: 3em;
+$h2_fontweight: 400;
+$h2_letterspacing: 0.05em;
+
+// Заголовок 3
+$h3_size: 1.5em;
+$h3_fontweight: 400;
+$h3_letterspacing: 0.4em;
+
+// Вступительный текст на первом экране
+$introtext_size: 1.2em;
+$introtext_fontweight: 400;
+$introtext_letterspacing: 0em;
+$introtext_lineheight: 130%;
+
+// Загаловки тригеров
+$title_size: 1.3em;
+$title_fontweight: 400;
+$title_letterspacing: 0.1em;
+
+// Ссылки
+$link_underline: none;
+$link_hover_underline: underline;
+
+// Логотип на первом экране
+$logo_size: 1.4em;
+$logo_fontweight: 600;
+$logo_letterspacing: 0.1em;
+
+// Телефон на первом экране
+$phone_size: 1.1em;
+$phone_fontweight: 600;
+$phone_letterspacing: 0.05em;
+
+// Обычны текст
+$text_size: 1.1em;
+$text_letterspacing: 0;
+$text_lineheight: 140%;
+$text_fontweight: 300;
+
+// Выделенный текст
+$accenttext_size: 1.25em;
+$accenttext_letterspacing: 0;
+$accenttext_lineheight: 140%;
+$accenttext_fontweight: 400;
+
+// Фразы, цитаты
+$impacttext_size: 1.6em;
+$impacttext_letterspacing: 0.05em;
+$impacttext_lineheight: 160%;
+$impacttext_fontweight: 400;
+
+// Сноски, примечания, второстепенный текст
+$note_size: 1em;
+$note_letterspacing: 0;
+$note_lineheight: 140%;
+$note_fontweight: 300;
+
+// Подписи к фото, видео
+$caption_size: 1.1em;
+$caption_letterspacing: 0.05em;
+$caption_lineheight: 140%;
+$caption_fontweight: 300;
+
+// Отзывы
+$review_fontsize: 1em;
+$review_letterspacing: 0.05em;
+$review_lineheight: 140%;
+$review_fontweight: 300;
+$review_fontstyle: italic;
+
+$reviewauthor_fontsize: 0.9em;
+$reviewauthor_letterspacing: 0.03em;
+$reviewauthor_lineheight: 140%;
+$reviewauthor_fontweight: 400;
+$reviewauthor_fontstyle: normal;
+$reviewauthor_imgsize: 80px;
+
+// Вертикальные блоки с номерами
+$process_fontweight: 600;
+$process_fontsize: 1.2em;
+$processlistitem_paddingleft: 4.5em;
+$processlistitem_paddingbottom: 20px;
+$processcontent_padding: 0.5em 0;
+$processstep_circle_size: 2em;
+$processstep_circle_padding: 0.6em;
+
+// Карта
+$mapsection_height: 500px;
+$mapsection_min_height: 250px;
+
+// Footer
+$footer_size: 0.85em;
+$footer_letterspacing: 0;
+$footer_lineheight: 180%;
+$footer_fontweight: 300;
+
+// Разработчик
+$developer_size: 1.1em;
+$developer_letterspacing: 0.05em;
+$developer_lineheight: 180%;
+$developer_fontweight: 400;
+$developer_case: uppercase;
+
+// Блоки
+$blocktext_size: 0.95em;
+$round_block_border: 2px;
+$round_block_size: 160px;
+$block_margin: $basesize;
+
+// Списки
+$list_marker: "■";
+
+// Верхнее меню 
+$menuitem_size: 0.85em;
+$menuitem_weight: 600;
+$menu_padding: $margin_small;
+$menu_height: 60px;
+
+// Кнопки
+$button_border: 2px;
+$buton_size: 250px;
+$buttontext_size: 1.1em;
+$buttontext_letterspacing: 0.1em;
+$buttontext_fontweight: 400;
+$buttontext_case: uppercase;
+$button_radius: 5px;
+$tab__button__padding: 10px;
+$tab__button__minwidth: 200px;
+
+$socialbutton_size: 40px;
+$socialbutton_border: 2px;
+$social_radius: 50%;
+$sicialbutton_iconsize: 18px;
+
+// Forms
+$input_border: 1px;
+$input_radius: 4px;
+
+$label_size: 0.9em;
+$label_letterspacing: 0.1em;
+$label_fontweight: 300;
+$label_case: normal;
+
+// Tables
+$cell_padding: 10px;
+$td_size: 1em;
+$td_letterspacing: 0;
+$td_fontweight: 300;
+$th_size: 1em;
+$th_letterspacing: 0.15em;
+$th_fontweight: 400;
+$th_case: uppercase;
+
+// Media
+$media_64_multiplier: 0.85;
+$media_50_multiplier: 0.80;
+$media_39_multiplier: 0.60;
+
+
