@@ -4,6 +4,7 @@
 	
 	use App\Entities\MailEntity;
 	use App\Mail\ContactRequest;
+	use App\Repositories\ReviewsRepository;
 	use App\Repositories\RoomsRepository;
 	use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 	use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -17,10 +18,13 @@
 		use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 		/** @var RoomsRepository */
 		protected $roomsRepo;
+		/** @var ReviewsRepository */
+		protected $reviewsRepo;
 		
 		public function __construct()
 		{
 			$this->roomsRepo = app(RoomsRepository::class);
+			$this->reviewsRepo = app(ReviewsRepository::class);
 		}
 		
 		public function index(Request $request)
@@ -54,11 +58,13 @@
 			
 			$galleryItems = $this->roomsRepo->allActive();
 			$rooms = $this->roomsRepo->findByType('room');
+			$reviews = $this->reviewsRepo->all();
 			
 			return view('layouts.index', [
 				'advantages'   => $advantages,
 				'galleryItems' => $galleryItems,
 				'rooms'        => $rooms,
+				'reviews'      => $reviews,
 			]);
 		}
 		

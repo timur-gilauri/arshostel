@@ -16,7 +16,7 @@
 			Schema::create('reviews', function (Blueprint $table) {
 				$table->increments('id');
 				$table->string('author_name');
-				$table->string('content');
+				$table->text('content');
 				$table->timestamps();
 			});
 		}

@@ -1,56 +1,32 @@
-<section id="reviews">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col col-md-10">
-                <h2>Отзывы клиентов</h2>
+@if(isset($reviews) && $reviews)
+    <section id="reviews">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-md-10">
+                    <h2>Отзывы клиентов</h2>
+                </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col">
-                <ul class="reviews list-unstyled">
-                    @for($i = 1; $i <= 3; $i++)
-                        <li class="reviews-item">
-                            <h4>Имя автора</h4>
-                            <p class="reviews-item__content">Уважаемый Олег Юрьевич, я безгранично благодарна Богу и
-                                Ангелу
-                                Хранителю за то, что на моем
-                                жизненном пути, в самый тяжелый момент моей жизни появились Вы. Считаю наше знакомство с
-                                Вами
-                                одним из самых главных событий в моей жизни, т. к. моя жизнь разделилась на до и после
-                                встречи с
-                                Вами! Неврозом, тревожными состояниями и паническими атаками я страдала уже давно,
-                                первые
-                                звоночки появились еще в школьные годы, с годами состояние ухудшалась в силу разных
-                                трагических
-                                событий в моей жизни, но окончательно моя жизнь стала невыносимой и бессмысленной, когда
-                                умер от
-                                тяжелой болезни мой единственный сынок совсем еще маленьким. От жгучей боли и тоски я не
-                                знала
-                                куда себя деть ,я думала что схожу с ума, мне никто не мог помочь и объяснить почему
-                                так...Отношения с мужем почти закончились, т.к. он тоже жил в переживании нашего горя и
-                                друг
-                                друга мы не видели. Первое занятие меня повергло в шок, возник вопрос откуда Вы знаете
-                                что
-                                твориться в моей голове, в моей душе? Вы так точно и быстро определили что со мной
-                                происходит,
-                                выявили мои глубинные проблемы, а главное Вы вселили Надежду на то, что я смогу
-                                преодолеть
-                                тяжесть потери ребенка, принять и наполнить смыслом уход сына, радоваться жизни и быть
-                                благодарной за все. Я точно знала, что пройду полный курс лечения, интуиция подсказывала
-                                мне,
-                                что я на правильном пути.
-                            </p>
-                        </li>
-                    @endfor
-                </ul>
-                <div class="small-controls bx-controls">
-                    <div class="bx-controls-direction">
-                        <div class="small-control bx-prev reviews-bx-prev"></div>
-                        <div class="small-control bx-next reviews-bx-next"></div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <ul class="reviews list-unstyled">
+                        @foreach($reviews as $review)
+                            <li class="reviews-item">
+                                <h4>{{$review->getAuthorName()}}</h4>
+                                <p class="reviews-item__content">
+                                    {{$review->getContent()}}
+                                </p>
+                            </li>
+                        @endforeach
+                    </ul>
+                    <div class="small-controls bx-controls">
+                        <div class="bx-controls-direction">
+                            <div class="small-control bx-prev reviews-bx-prev"></div>
+                            <div class="small-control bx-next reviews-bx-next"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+@endif

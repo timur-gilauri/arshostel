@@ -18,6 +18,7 @@
 		 */
 		public function __construct()
 		{
+			$this->middleware('auth');
 			$this->repo = app(RoomsRepository::class);
 		}
 		

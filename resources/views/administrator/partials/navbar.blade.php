@@ -13,11 +13,13 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{route('admin::rooms::index')}}">Комнаты</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('admin::reviews::index')}}">Отзывы</a>
+                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 @if (Auth::guest())
                     <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Вход</a></li>
-                    <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Регистрация</a></li>
                 @else
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"

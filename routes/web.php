@@ -33,8 +33,22 @@
 			Route::get('/delete/{id}', 'RoomsController@delete')->name('delete');
 		});
 		
+		Route::group([
+			'prefix' => 'reviews/',
+			'as'     => 'reviews::',
+		], function () {
+			Route::get('/', 'ReviewsController@index')->name('index');
+			Route::get('/create', 'ReviewsController@create')->name('create');
+			Route::get('/edit/{id}', 'ReviewsController@edit')->name('edit');
+			Route::post('/save', 'ReviewsController@save')->name('save');
+			Route::get('/delete/{id}', 'ReviewsController@delete')->name('delete');
+		});
+		
 		
 	});
 	
 	Auth::routes();
-
+	
+	Route::get('/register', function () {
+		return redirect(route('index'), 301);
+	});

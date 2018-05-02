@@ -2,8 +2,8 @@
 	/**
 	 * Created by PhpStorm.
 	 * User: timur
-	 * Date: 25.04.2018
-	 * Time: 12:03
+	 * Date: 03.05.2018
+	 * Time: 3:41
 	 */
 	
 	namespace App\Repositories;
@@ -13,8 +13,11 @@
 	use App\Models\Review;
 	use Illuminate\Support\Collection;
 	
-	class ReviewRepository
+	class ReviewsRepository
 	{
+		/**
+		 * @return Collection
+		 */
 		public function all(): Collection
 		{
 			return Review::all()->map(function (Review $model) {
@@ -25,21 +28,19 @@
 		/**
 		 * @param int $id
 		 *
-		 * @return null
+		 * @return ReviewEntity|null
 		 */
 		public function find(int $id)
 		{
-			$model = Review::find($id);
-			
-			return $model ? $this->toEntity($model) : null;
+			return ($model = Review::find($id)) ? $this->toEntity($model) : null;
 		}
 		
 		/**
 		 * @param Review $model
 		 *
-		 * @return ReviewEntitys
+		 * @return ReviewEntity
 		 */
-		public function toEntity(Review $model)
+		public function toEntity(Review $model): ReviewEntity
 		{
 			$entity = new ReviewEntity();
 			
@@ -62,7 +63,6 @@
 			
 			$model->author_name = $entity->getAuthorName();
 			$model->content = $entity->getContent();
-			$model->created_at = $entity->getCreatedAt();
 			
 			if ($model->save()) {
 				if (!$entity->getId()) {
@@ -76,19 +76,18 @@
 		}
 		
 		/**
-		 * @param int $id
+		 * @param ReviewEntity $entity
 		 *
 		 * @return bool
 		 */
-		public function remove(int $id): bool
+		public function delete(ReviewEntity $entity)
 		{
 			try {
-				Review::find($id)->delete();
+				Review::find($entity->getId())->delete();
 				
 				return true;
 			} catch (\Exception $error) {
 				return false;
 			}
-			
 		}
 	}
