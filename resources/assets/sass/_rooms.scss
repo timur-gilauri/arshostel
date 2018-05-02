@@ -57,16 +57,12 @@ $roomImgSize: $roomWidth;
           }
           .currency {
             font-size: 20px;
-            color: #4586FF;
+            color: #ff3366;
           }
           .price-room {
             font-size: 26px;
             font-weight: 400;
-            color: #4586FF;
-            &.price-menu {
-              color: #F96D00;
-              font-size: 30px;
-            }
+            color: #ff3366;
           }
         }
       }
