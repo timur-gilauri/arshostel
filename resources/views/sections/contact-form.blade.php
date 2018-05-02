@@ -17,6 +17,7 @@
                             <input type="text"
                                    class="form-control form-control-lg"
                                    id="name"
+                                   name="name"
                                    placeholder="Имя"
                                    required>
                             @if($errors->has('name'))
@@ -29,6 +30,7 @@
                             <input type="email"
                                    class="form-control form-control-lg"
                                    id="email"
+                                   name="email"
                                    placeholder="Email"
                                    required>
                             @if($errors->has('email'))
@@ -41,6 +43,7 @@
                             <input type="text"
                                    class="form-control form-control-lg"
                                    id="phone"
+                                   name="phone"
                                    placeholder="Телефон"
                                    required>
                             @if($errors->has('phone'))
@@ -53,6 +56,7 @@
                     <div class="form-group">
                         <textarea class="form-control form-control-lg"
                                   id="message"
+                                  name="message"
                                   rows="3"
                                   placeholder="Сообщение"></textarea>
                     </div>

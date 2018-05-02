@@ -12,6 +12,7 @@
 		"codesleeve/laravel-stapler": "1.0.*",
 		"doctrine/dbal": "~2.3",
 		"fideloper/proxy": "^4.0",
+		"guzzlehttp/guzzle": "~4.0",
 		"laravel/framework": "^5.5",
 		"laravel/tinker": "^1.0",
 		"laravelnews/laravel-twbs4": "^1.3"

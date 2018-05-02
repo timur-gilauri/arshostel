@@ -2,12 +2,15 @@
 	
 	namespace App\Http\Controllers;
 	
+	use App\Entities\MailEntity;
+	use App\Mail\ContactRequest;
 	use App\Repositories\RoomsRepository;
 	use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 	use Illuminate\Foundation\Bus\DispatchesJobs;
 	use Illuminate\Foundation\Validation\ValidatesRequests;
 	use Illuminate\Http\Request;
 	use Illuminate\Routing\Controller as BaseController;
+	use Illuminate\Support\Facades\Mail;
 	
 	class Controller extends BaseController
 	{
@@ -61,6 +64,19 @@
 		
 		public function contactRequest(Request $request)
 		{
-		
+			$entity = new MailEntity($request->all());
+			
+			try {
+				Mail::to('fatboy_slim@mail.ru')->send(new ContactRequest($entity));
+				
+				session()->flash('message', 'Мы успешно приняли ваш запрос и перезвоним вам в ближайшее время.');
+				
+				return redirect(url('/#contacts'), 301);
+			} catch (\Exception $error) {
+				session()->flash('color', 'danger');
+				session()->flash('message', 'Во время отправки сообщения произошла ошибка.');
+				
+				return redirect(url('/#contacts'), 301);
+			}
 		}
 	}
