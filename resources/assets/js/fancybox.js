@@ -1,5 +1,5 @@
 $(function () {
-    $('[data-fancybox="rooms"]').fancybox({
+    $('[data-slider="rooms"]').fancybox({
         arrows: false,
         buttons: [
             'close'

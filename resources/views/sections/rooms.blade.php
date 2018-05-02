@@ -12,7 +12,7 @@
                         <li class="rooms-item">
                             <a href="{{$room->getImage()->url()}}"
                                class="rooms-item__image"
-                               data-fancybox="rooms"
+                               data-slider="rooms"
                                data-caption="{{$room->getTitle() . ' - ' . $room->getPrice() . '₽ / за ночь'}}">
                                 <img src="{{$room->getImage()->url('thumb')}}" alt="{{$room->getTitle()}}">
                             </a>
