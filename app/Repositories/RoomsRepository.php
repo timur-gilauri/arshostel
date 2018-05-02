@@ -21,13 +21,23 @@
 		}
 		
 		/**
+		 * @return Collection
+		 */
+		public function allActive(): Collection
+		{
+			return Room::where('available', 1)->get()->map(function (Room $model) {
+				return $this->toEntity($model);
+			});
+		}
+		
+		/**
 		 * @param int $id
 		 *
 		 * @return RoomEntity|null
 		 */
 		public function find(int $id)
 		{
-			return ($model = Room::find($id)) ? $this->toEntity($model) : null;
+			return ($model = Room::where('available', 1)->where('id', $id)->first()) ? $this->toEntity($model) : null;
 		}
 		
 		/**
@@ -37,7 +47,7 @@
 		 */
 		public function findByType(string $type)
 		{
-			return Room::where('type', $type)->get()->map(function (Room $model) {
+			return Room::where('available', 1)->where('type', $type)->get()->map(function (Room $model) {
 				return $this->toEntity($model);
 			});
 		}

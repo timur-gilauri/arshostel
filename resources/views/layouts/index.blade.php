@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
 </head>
 <body>
-@include('blocks.navbar.navbar')
-@include('blocks.navbar.mobile-navbar')
+@include('partials.navbar.navbar')
+@include('partials.navbar.mobile-navbar')
 
 @include('sections.header')
 
-@include('sections.gallery')
+@include('sections.rooms')
 
 @include('sections.advantages')
+
+@include('sections.gallery')
 
 @include('sections.reviews')
 

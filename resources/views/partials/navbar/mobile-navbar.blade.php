@@ -5,7 +5,7 @@
             <span></span>
             <span></span>
         </div>
-        <a href="tel:+7 908 983 8787" class="mobile-nav__phone-btn"><i class="fas fa-phone"></i>+7 908 983 8787</a>
+        <a href="tel:+7 908 983 8787" class="mobile-nav__phone-btn"><i class="icon-mobile"></i>+7 908 983 8787</a>
         <div class="menu-wrapper">
             <ul class="mobile-menu list-unstyled">
                 <li class="nav-item scroll-action" data-href="#top">

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-md-10">
-                <h2>Наши номера</h2>
+                <h2>Галерея</h2>
             </div>
         </div>
 
@@ -11,7 +11,9 @@
                 <ul class="gallery list-unstyled">
                     @foreach($galleryItems as $item)
                         <li class="gallery-item">
-                            <a href="{{$item->getImage()->url()}}" data-fancybox="rooms">
+                            <a href="{{$item->getImage()->url()}}"
+                               data-fancybox="gallery"
+                               data-caption="{{$item->getTitle()}}">
                                 <img src="{{$item->getImage()->url('thumb')}}"
                                      height="250"
                                      width="250"

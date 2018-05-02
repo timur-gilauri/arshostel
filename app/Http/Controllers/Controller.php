@@ -45,15 +45,17 @@
 				],
 				[
 					'icon' => 'clock',
-					'text' => 'Круглосуточная регистрация',
+					'text' => 'Ррегистрация 24/7',
 				],
 			];
 			
-			$galleryItems = $this->roomsRepo->findByType('room');
+			$galleryItems = $this->roomsRepo->allActive();
+			$rooms = $this->roomsRepo->findByType('room');
 			
 			return view('layouts.index', [
 				'advantages'   => $advantages,
 				'galleryItems' => $galleryItems,
+				'rooms'        => $rooms,
 			]);
 		}
 		

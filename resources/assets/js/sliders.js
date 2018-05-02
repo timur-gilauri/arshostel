@@ -1,9 +1,10 @@
 $(function () {
     let galleryList = $('.gallery'),
         reviewsList = $('.reviews'),
+        roomsList = $('.rooms'),
         bigScreen = $(window).width() > 64 * 16,
         slidesCount = bigScreen ? 3 : 1,
-        slideWidth = galleryList.width() / slidesCount,
+        slideWidth = 900 / slidesCount,
         gallerySettings = {
             adaptiveHeight: true,
             slideWidth: slideWidth,
@@ -25,6 +26,7 @@ $(function () {
         pager: false,
         controls: true
     };
+    let roomsSettings = {...gallerySettings};
 
     if ($(window).width() <= 420 || $(window).height() < 420) {
         gallerySettings = {
@@ -36,15 +38,22 @@ $(function () {
             ...reviewsSliderSettings,
             prevSelector: '.reviews-bx-prev',
             nextSelector: '.reviews-bx-next',
+        };
+        roomsSettings = {
+            ...gallerySettings,
+            prevSelector: '.rooms-bx-prev',
+            nextSelector: '.rooms-bx-next',
         }
     }
 
 
     let reviewsSlider = reviewsList.bxSlider(reviewsSliderSettings);
     let gallerySlider = galleryList.bxSlider(gallerySettings);
+    let roomsSlider = roomsList.bxSlider(roomsSettings);
 
     $(window).on('orientationchange', function () {
         reviewsSlider.reloadSlider(reviewsSliderSettings);
         gallerySlider.reloadSlider(gallerySettings);
+        roomsSlider.reloadSlider(roomsSettings);
     });
 });

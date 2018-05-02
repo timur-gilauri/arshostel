@@ -17,5 +17,5 @@
             <i class="icon-location mr-3"></i>Как нас найти
         </li>
     </ul>
-    <a class="btn navbar-phone-btn" href="tel:+7 908 983 8787"><i class="fas fa-phone"></i>+7 908 983 8787</a>
+    <a class="btn navbar-phone-btn" href="tel:+7 908 983 8787"><i class="icon-mobile"></i>+7 908 983 8787</a>
 </nav>
