@@ -9,19 +9,25 @@
         <div class="menu-wrapper">
             <ul class="mobile-menu list-unstyled">
                 <li class="nav-item scroll-action" data-href="#top">
-                    <i class="icon-home"></i>Наверх
+                    <i class="icon-home mr-3"></i>Наверх
                 </li>
-                <li class="nav-item scroll-action" data-href="#gallery">
-                    <i class="icon-images"></i>Галерея
+                <li class="nav-item scroll-action" data-href="#rooms">
+                    <i class="icon-images mr-3"></i>Номера
                 </li>
                 <li class="nav-item scroll-action" data-href="#advantages">
-                    <i class="icon-star-empty"></i>Что мы предлагаем
+                    <i class="icon-star-empty mr-3"></i>Что мы предлагаем
+                </li>
+                <li class="nav-item scroll-action" data-href="#gallery">
+                    <i class="icon-images mr-3"></i>Галерея
+                </li>
+                <li class="nav-item scroll-action" data-href="#reviews">
+                    <i class="icon-chat mr-3"></i>Отзывы
                 </li>
                 <li class="nav-item scroll-action" data-href="#contacts">
-                    <i class="icon-profile"></i>Напишите нам
+                    <i class="icon-profile mr-3"></i>Напишите нам
                 </li>
                 <li class="nav-item scroll-action" data-href="#map">
-                    <i class="icon-location"></i>Как нас найти
+                    <i class="icon-location mr-3"></i>Как нас найти
                 </li>
             </ul>
         </div>
