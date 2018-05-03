@@ -15,7 +15,7 @@
             </div>
             <div class="col-12 col-md-4 text-center">
                 <h4 class="text-center font-weight-bold">Мы принимаем</h4>
-                <img src="/images/credit-cards.png" height="60" alt="">
+                <img src="/img/credit-cards.png" height="60" alt="">
             </div>
         </div>
     </div>

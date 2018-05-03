@@ -1,14 +1,14 @@
 @if(isset($reviews) && $reviews)
     <section id="reviews">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col col-md-10">
+                <div class="col">
                     <h2>Отзывы клиентов</h2>
                 </div>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col col-md-10">
+                <div class="col">
                     <div class="reviews owl-carousel owl-theme">
                         @foreach($reviews as $review)
                             <div class="reviews-item">

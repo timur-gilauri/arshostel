@@ -3,11 +3,12 @@
 /public/storage
 /public/css/
 /public/js/
-/public/i/
+/public/images/
 /public/mix-manifest.json
 /storage/*.key
 /vendor
 /.idea
+/.rocketeer
 /.vscode
 /.vagrant
 Homestead.json

@@ -1,13 +1,13 @@
 <section id="gallery">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col">
                 <h2>Галерея</h2>
             </div>
         </div>
 
-        <div class="row justify-content-center bx-slider-container">
-            <div class="col col-md-10">
+        <div class="row justify-content-center">
+            <div class="col">
                 <div class="gallery owl-carousel owl-theme">
                     @foreach($galleryItems as $item)
                         <div class="item">
