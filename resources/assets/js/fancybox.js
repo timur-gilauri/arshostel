@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
     $('[data-slider="rooms"]').fancybox({
         arrows: false,
         buttons: [

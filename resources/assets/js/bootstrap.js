@@ -13,7 +13,7 @@ try {
 
     require('bootstrap');
 
-    window.bxSlider = require('bxslider');
+    require('owl.carousel');
 
     window.fancybox = require('./../vendors/fancybox/jquery.fancybox');
 } catch (e) {

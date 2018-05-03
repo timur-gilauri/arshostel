@@ -5,11 +5,11 @@
                 <h2>Наши номера</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 animate-box">
-                <ul class="rooms list-unstyled">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="owl-carousel owl-theme rooms">
                     @foreach($rooms as $room)
-                        <li class="rooms-item">
+                        <div class="item">
                             <a href="{{$room->getImage()->url()}}"
                                class="rooms-item__image"
                                data-slider="rooms"
@@ -24,15 +24,18 @@
                                     <span class="per">/ за ночь</span>
                                 </p>
                             </div>
-                        </li>
+                        </div>
                     @endforeach
-                </ul>
-                <div class="small-controls bx-controls">
-                    <div class="bx-controls-direction">
-                        <div class="small-control bx-prev rooms-bx-prev"></div>
-                        <div class="small-control bx-next rooms-bx-next"></div>
-                    </div>
                 </div>
+                {{--<div class="bx-controls">
+                    <div class="bx-controls-direction">
+                        <button type="button" class="btn btn-primary small-control bx-prev reviews-bx-prev">
+                            <i class="icon-arrow-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary small-control bx-next reviews-bx-next">
+                            <i class="icon-arrow-right"></i></button>
+                    </div>
+                </div>--}}
             </div>
         </div>
     </div>

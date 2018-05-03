@@ -1,5 +1,7 @@
 @import "./../vendors/fancybox/jquery.fancybox";
 @import "./../vendors/icomoon/style";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/owl.theme.default";
 // Variables
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
@@ -11,6 +13,8 @@
 @import "header";
 @import "sliders";
 @import "rooms";
+@import "gallery";
+@import "reviews";
 @import "advantages";
 @import "responsive";
 @import "map";

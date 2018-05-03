@@ -4,13 +4,15 @@ $roomImgSize: $roomWidth;
   .rooms {
     padding: 0;
     margin: 0;
-    display: inline-block;
+    margin-top: 50px;
 
-    &-item {
-      width: $roomWidth;
-      &__image {
+    .item {
+      a {
         display: block;
         margin-bottom: 40px;
+      }
+      &__image {
+        display: block;
         outline: none;
         img {
           max-height: $roomImgSize;

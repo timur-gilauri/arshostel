@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icomoon-font-path}/icomoon.eot?y3zjwp');
-  src:  url('#{$icomoon-font-path}/icomoon.eot?y3zjwp#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/icomoon.ttf?y3zjwp') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?y3zjwp') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?y3zjwp#icomoon') format('svg');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?k888jj');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?k888jj#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?k888jj') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?k888jj') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?k888jj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,16 +30,6 @@ i {
   @return unquote("\"") + $str + unquote("\"");
 }
 
-.icon-location {
-  &:before {
-    content: unicode($icon-location); 
-  }
-}
-.icon-parking {
-  &:before {
-    content: unicode($icon-parking); 
-  }
-}
 .icon-shower {
   &:before {
     content: unicode($icon-shower); 
@@ -60,9 +50,14 @@ i {
     content: unicode($icon-microwave); 
   }
 }
-.icon-percent {
+.icon-parking {
   &:before {
-    content: unicode($icon-percent); 
+    content: unicode($icon-parking); 
+  }
+}
+.icon-location {
+  &:before {
+    content: unicode($icon-location); 
   }
 }
 .icon-home {
@@ -123,6 +118,21 @@ i {
 .icon-smile {
   &:before {
     content: unicode($icon-smile); 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: unicode($icon-arrow-right); 
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: unicode($icon-arrow-left); 
+  }
+}
+.icon-percent {
+  &:before {
+    content: unicode($icon-percent); 
   }
 }
 

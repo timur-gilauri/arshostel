@@ -11,18 +11,19 @@
 	},
 	"devDependencies": {
 		"axios": "^0.18",
-		"bootstrap": "^4.0.0",
+		"bootstrap": "^4.1.1",
 		"bxslider": "^4.2.13",
 		"cross-env": "^5.1",
 		"jquery": "^3.2",
 		"laravel-mix": "^2.0",
-		"lodash": "^4.17.4",
+		"lodash": "^4.17.10",
+		"owl.carousel": "^2.3.4",
 		"popper.js": "^1.12.9",
 		"vue": "^2.5.7"
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.3.5",
-		"@fortawesome/fontawesome-free-webfonts": "^1.0.6",
+		"@fortawesome/fontawesome-free-webfonts": "^1.0.7",
 		"foundation-sites": "^6.4.4-rc1"
 	}
 }

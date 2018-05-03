@@ -1,16 +1,16 @@
 <section id="gallery">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col col-md-10">
+            <div class="col">
                 <h2>Галерея</h2>
             </div>
         </div>
 
         <div class="row justify-content-center bx-slider-container">
-            <div class="col">
-                <ul class="gallery list-unstyled">
+            <div class="col col-md-10">
+                <div class="gallery owl-carousel owl-theme">
                     @foreach($galleryItems as $item)
-                        <li class="gallery-item">
+                        <div class="item">
                             <a href="{{$item->getImage()->url()}}"
                                data-fancybox="gallery"
                                data-caption="{{$item->getTitle()}}">
@@ -20,14 +20,8 @@
                                      alt=""
                                      class="gallery-item__img">
                             </a>
-                        </li>
+                        </div>
                     @endforeach
-                </ul>
-                <div class="small-controls bx-controls">
-                    <div class="bx-controls-direction">
-                        <div class="small-control bx-prev gallery-bx-prev"></div>
-                        <div class="small-control bx-next gallery-bx-next"></div>
-                    </div>
                 </div>
             </div>
         </div>
