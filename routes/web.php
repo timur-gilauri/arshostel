@@ -11,9 +11,9 @@
 	|
 	*/
 	
-	Route::get('/', 'Controller@index')->name('index');
+	Route::get('/', 'FrontController@index')->name('index');
 	
-	Route::post('contacts', 'Controller@contactRequest')->name('contacts');
+	Route::post('contacts', 'FrontController@contactRequest')->name('contacts');
 	
 	Route::group([
 		'prefix' => 'administrator/',
