@@ -9,7 +9,9 @@
 
         <div class="row justify-content-center">
             <div class="col col-md-8">
-                @include('blocks.session-message')
+
+                <div id="contact-form-message" class="alert contact-form-message" role="alert"></div>
+
                 <form id="contacts-form" action="{{route('contacts')}}" method="post">
                     {{csrf_field()}}
                     <div class="form-row form-group">
@@ -61,7 +63,7 @@
                                   placeholder="Сообщение"></textarea>
                     </div>
                     <div class="row justify-content-center">
-                        <button type="submit" class="button submit-button">Забронировать</button>
+                        <button id="submit-btn" type="button" class="button submit-button">Забронировать</button>
                     </div>
                 </form>
             </div>

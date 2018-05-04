@@ -15,24 +15,26 @@
     @include('blocks.meta-description')
 </head>
 <body>
-@include('partials.navbar.navbar')
-@include('partials.navbar.mobile-navbar')
+<main id="#top">
+    @include('partials.navbar.navbar')
+    @include('partials.navbar.mobile-navbar')
 
-@include('sections.header')
+    @include('sections.header')
 
-@include('sections.rooms')
+    @include('sections.rooms')
 
-@include('sections.advantages')
+    @include('sections.advantages')
 
-@include('sections.gallery')
+    @include('sections.gallery')
 
-@include('sections.reviews')
+    @include('sections.reviews')
 
-@include('sections.contact-form')
+    @include('sections.contact-form')
 
-@include('sections.map')
+    @include('sections.map')
 
-@include('sections.footer')
+    @include('sections.footer')
+</main>
 
 <script src="{{mix('js/app.js')}}"></script>
 

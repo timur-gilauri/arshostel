@@ -11,3 +11,5 @@ require('./theme');
 require('./sliders');
 
 require('./fancybox');
+
+require('./contact-form');

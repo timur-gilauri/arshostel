@@ -63,13 +63,13 @@
 				],
 			];
 			
-			$galleryItems = Cache::remember('gallery.all', $this->cacheExpiresAt, function() {
+			$galleryItems = Cache::remember('gallery.all', $this->cacheExpiresAt, function () {
 				return $this->roomsRepo->allActive();
 			});
-			$rooms = Cache::remember('rooms.all', $this->cacheExpiresAt, function() {
+			$rooms = Cache::remember('rooms.all', $this->cacheExpiresAt, function () {
 				return $this->roomsRepo->findByType('room');
 			});
-			$reviews = Cache::remember('reviews.all', $this->cacheExpiresAt, function() {
+			$reviews = Cache::remember('reviews.all', $this->cacheExpiresAt, function () {
 				return $this->reviewsRepo->all();
 			});
 			
@@ -85,17 +85,19 @@
 		{
 			$entity = new MailEntity($request->all());
 			
+			$response = [
+				'message' => 'Во время отправки сообщения произошла ошибка.',
+				'success' => false,
+			];
+			
 			try {
 				Mail::to(env('MAIL_USERNAME'))->send(new ContactRequest($entity));
 				
-				session()->flash('message', 'Мы успешно приняли ваш запрос и перезвоним вам в ближайшее время.');
-				
-				return redirect(url('/#contacts'), 301);
+				$response['message'] = 'Мы успешно приняли ваш запрос и перезвоним вам в ближайшее время.';
+				$response['success'] = true;
 			} catch (\Exception $error) {
-				session()->flash('color', 'danger');
-				session()->flash('message', 'Во время отправки сообщения произошла ошибка.');
-				
-				return redirect(url('/#contacts'), 301);
 			}
+			
+			return $response;
 		}
 	}

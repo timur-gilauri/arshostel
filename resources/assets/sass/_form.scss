@@ -1,0 +1,19 @@
+#contacts {
+  .contact-form-message {
+    display: none;
+  }
+  form {
+    button {
+      &:disabled {
+        background: #bbb;
+        color: #666;
+        border-color: #666;
+        &:hover {
+          background: #bbb;
+          color: #666;
+          border-color: #666;
+        }
+      }
+    }
+  }
+}

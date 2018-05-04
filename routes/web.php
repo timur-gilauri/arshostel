@@ -13,7 +13,7 @@
 	
 	Route::get('/', 'FrontController@index')->name('index');
 	
-	Route::post('contacts', 'FrontController@contactRequest')->name('contacts');
+	Route::post('contact-request', 'FrontController@contactRequest')->name('contacts');
 	
 	Route::group([
 		'prefix' => 'administrator/',

@@ -30,7 +30,8 @@
 		 */
 		public function build()
 		{
-			return $this->markdown('email.contact-request')
+			return $this->subject('Запрос с сайта '.env('APP_NAME'))
+				->markdown('email.contact-request')
 				->with('entity', $this->entity);
 		}
 	}
