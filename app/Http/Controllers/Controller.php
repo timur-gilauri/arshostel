@@ -73,7 +73,7 @@
 			$entity = new MailEntity($request->all());
 			
 			try {
-				Mail::to('fatboy_slim@mail.ru')->send(new ContactRequest($entity));
+				Mail::to(env('MAIL_USERNAME'))->send(new ContactRequest($entity));
 				
 				session()->flash('message', 'Мы успешно приняли ваш запрос и перезвоним вам в ближайшее время.');
 				

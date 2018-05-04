@@ -9,6 +9,10 @@
     <title>АрсХостел - уютный хостел в Арсеньеве.</title>
 
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
+
+    <link rel="shortcut icon" type="image/png" href="{{asset('favicon.png')}}">
+
+    @include('blocks.meta-description')
 </head>
 <body>
 @include('partials.navbar.navbar')

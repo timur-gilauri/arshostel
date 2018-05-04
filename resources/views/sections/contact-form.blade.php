@@ -12,8 +12,8 @@
                 @include('blocks.session-message')
                 <form id="contacts-form" action="{{route('contacts')}}" method="post">
                     {{csrf_field()}}
-                    <div class="form-row">
-                        <div class="col col-md-4 form-group">
+                    <div class="form-row form-group">
+                        <div class="col-12 col-md-4">
                             <input type="text"
                                    class="form-control form-control-lg"
                                    id="name"
@@ -26,7 +26,7 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="col col-md-4 form-group">
+                        <div class="col-12 col-md-4">
                             <input type="email"
                                    class="form-control form-control-lg"
                                    id="email"
@@ -39,7 +39,7 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="col col-md-4 form-group">
+                        <div class="col-12 col-md-4">
                             <input type="text"
                                    class="form-control form-control-lg"
                                    id="phone"
