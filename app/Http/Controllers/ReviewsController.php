@@ -20,7 +20,6 @@
 		{
 			$this->middleware('auth');
 			$this->repo = app(ReviewsRepository::class);
-			parent::__construct();
 		}
 		
 		/**

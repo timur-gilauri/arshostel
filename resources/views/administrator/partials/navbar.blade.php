@@ -9,18 +9,18 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('admin::rooms::index')}}">Комнаты</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('admin::reviews::index')}}">Отзывы</a>
-                </li>
-            </ul>
+            @if(!Auth::guest())
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('admin::rooms::index')}}">Комнаты</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('admin::reviews::index')}}">Отзывы</a>
+                    </li>
+                </ul>
+            @endif
             <ul class="navbar-nav ml-auto">
-                @if (Auth::guest())
-                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Вход</a></li>
-                @else
+                @if (!Auth::guest())
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">

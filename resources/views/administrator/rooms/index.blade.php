@@ -15,7 +15,7 @@
             <th scope="col">Название</th>
             <th scope="col">Количество мест</th>
             <th scope="col">Цена</th>
-            <th scope="col">Доступность</th>
+            <th scope="col">Доступна</th>
             <th scope="col">Редактировать</th>
             <th scope="col">Удалить</th>
         </tr>
@@ -25,9 +25,9 @@
             <tr>
                 <th scope="row">{{$item->getId()}}</th>
                 <td>{{$item->getTitle()}}</td>
-                <td>{{$item->getBeds()}}</td>
-                <td>{{$item->getPrice()}}</td>
-                <td>{{$item->getAvailable()}}</td>
+                <td class="text-center">{{$item->getBeds()}}</td>
+                <td class="text-center">{{$item->getPrice()}}</td>
+                <td class="text-center">{{$item->isAvailable() ? 'Да' : 'Нет'}}</td>
                 <td>
                     <a href="{{route('admin::rooms::edit', $item->getId())}}" class="btn btn-info">Редактировать</a>
                 </td>
