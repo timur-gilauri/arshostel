@@ -5,6 +5,7 @@
 	use App\Entities\RoomEntity;
 	use App\Repositories\RoomsRepository;
 	use Illuminate\Http\Request;
+	use Illuminate\Support\Facades\Cache;
 	
 	class RoomsController extends Controller
 	{
@@ -109,6 +110,9 @@
 			}
 			
 			if ($this->repo->save($entity)) {
+				
+				Cache::forget('rooms.all');
+				
 				session()->flash('message', 'Комната успешно сохранена');
 				
 				return redirect(route('admin::rooms::index'));
@@ -130,6 +134,9 @@
 				session()->flash('message', 'Комната с данным id не найдена.');
 			}
 			if ($this->repo->delete($item)) {
+				
+				Cache::forget('rooms.all');
+				
 				session()->flash('message', 'Комната удалена.');
 				
 				return redirect(route('admin::rooms::index'), 301);

@@ -37,6 +37,16 @@
 		 */
 		public function find(int $id)
 		{
+			return ($model = Room::find($id)) ? $this->toEntity($model) : null;
+		}
+		
+		/**
+		 * @param int $id
+		 *
+		 * @return RoomEntity|null
+		 */
+		public function findActive(int $id)
+		{
 			return ($model = Room::where('available', 1)->where('id', $id)->first()) ? $this->toEntity($model) : null;
 		}
 		
