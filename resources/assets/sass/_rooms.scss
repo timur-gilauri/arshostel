@@ -1,71 +1,65 @@
 $roomWidth: 250px;
 $roomImgSize: $roomWidth;
 #rooms {
-  .rooms {
-    padding: 0;
-    margin: 0;
-    margin-top: 50px;
-
-    .item {
-      a {
+  .item {
+    a {
+      display: block;
+      margin-bottom: 40px;
+    }
+    &__image {
+      display: block;
+      outline: none;
+      img {
+        max-height: $roomImgSize;
+        max-width: $roomImgSize;
+        height: $roomImgSize;
+        width: $roomImgSize;
         display: block;
-        margin-bottom: 40px;
-      }
-      &__image {
-        display: block;
-        outline: none;
-        img {
-          max-height: $roomImgSize;
-          max-width: $roomImgSize;
-          height: $roomImgSize;
-          width: $roomImgSize;
-          display: block;
-          margin: auto;
-        }
-      }
-      .desc {
-        -webkit-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
-        -moz-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
-        -ms-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
-        -o-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
-        box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
-        background: #fff;
-        width: $roomWidth;
         margin: auto;
-        padding-bottom: 20px;
-        .rate-star {
-          margin-bottom: 20px;
-          display: block;
-          i {
-            color: #fce3b1;
-          }
-          .full {
-            color: #F7AF1D;
-          }
+      }
+    }
+    .desc {
+      -webkit-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
+      -moz-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
+      -ms-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
+      -o-box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
+      box-shadow: 0px 15px 18px -17px rgba(0, 0, 0, 0.07);
+      background: #fff;
+      width: $roomWidth;
+      margin: auto;
+      padding-bottom: 20px;
+      .rate-star {
+        margin-bottom: 20px;
+        display: block;
+        i {
+          color: #fce3b1;
         }
-        h3 {
-          font-size: 16px;
-          font-weight: 600;
-          color: #000;
-          line-height: 1.2;
-          margin-top: 0;
-          margin-bottom: 20px;
-          font-family: "Roboto Slab", serif;
+        .full {
+          color: #F7AF1D;
         }
-        .price {
-          text-align: center;
-          span {
-            color: $text_color_light;
-          }
-          .currency {
-            font-size: 20px;
-            color: #ff3366;
-          }
-          .price-room {
-            font-size: 26px;
-            font-weight: 400;
-            color: #ff3366;
-          }
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: "Roboto Slab", serif;
+      }
+      .price {
+        text-align: center;
+        span {
+          color: $text_color_light;
+        }
+        .currency {
+          font-size: 20px;
+          color: #ff3366;
+        }
+        .price-room {
+          font-size: 26px;
+          font-weight: 400;
+          color: #ff3366;
         }
       }
     }

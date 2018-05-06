@@ -40,6 +40,7 @@ $(document).ready(function () {
         nav: true,
         dots: false,
         items: 1,
+        autoHeight: true,
         navText: [
             "<i class='icon-arrow-left owl-direction'></i>",
             "<i class='icon-arrow-right owl-direction'></i>"

@@ -1,16 +1,26 @@
 $navButtonSize: 30px;
+$imgSize: 300px;
 
 .owl-carousel {
+  padding: 0;
+  margin: auto;
+  height: 100%;
+  padding-top: 50px;
   .owl-item {
     img {
-      height: 250px;
+      display: block;
+      margin: auto;
+      max-height: $imgSize;
+      max-width: $imgSize;
+      height: 100%;
+      width: 100%;
     }
   }
 }
 
 .owl-nav {
   position: absolute;
-  top: -50px;
+  top: 0;
   margin: 0 !important;
   right: 0;
   button[class*='owl-'] {

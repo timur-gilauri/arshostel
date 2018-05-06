@@ -63,9 +63,6 @@
                                   placeholder="Сообщение"></textarea>
                     </div>
                     <div class="row justify-content-center">
-                        <div id="recaptcha" class="g-recaptcha"
-                             data-sitekey="6Lfma1cUAAAAAL4SWXQSeFVBYiLz6MBObdMvuomz"
-                             data-size="invisible"></div>
                         <button id="submit-btn"
                                 type="button"
                                 class="button submit-button">Забронировать
