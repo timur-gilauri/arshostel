@@ -4,10 +4,13 @@ $navbarFontSize: 16px;
   height: $navbarHeight;
   padding: 0 15px !important;
   font-size: $navbarFontSize;
+  background-color: #0f1925 !important;
+  color: #fff !important;
   .navbar-brand {
     height: $navbarHeight;
     padding: 0;
     line-height: $navbarHeight;
+    color: #fff !important;
   }
   .navbar-nav {
     margin: 0;
@@ -23,6 +26,7 @@ $navbarFontSize: 16px;
       cursor: pointer;
       font-weight: 600;
       font-size: inherit;
+      color: #fff !important;
     }
   }
   .navbar-phone-btn {

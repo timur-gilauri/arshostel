@@ -1,5 +1,7 @@
 <nav class="navbar fixed-top navbar-light bg-light" id="top">
-    <a class="navbar-brand scroll-action" href="#" data-href="#top">АрсХостел</a>
+    <a class="navbar-brand scroll-action" href="#" data-href="#top">
+        <img src="{{asset('img/logo.jpg')}}" height="40" alt="">
+    </a>
     <ul class="navbar-nav">
         <li class="nav-item scroll-action" data-href="#top">
             <i class="icon-home mr-3"></i>Наверх

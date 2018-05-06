@@ -1,11 +1,19 @@
 <nav class="mobile-navbar__wrapper navbar navbar-light">
     <div class="mobile-navbar">
-        <div class="hamburger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="mobile-navbar__inner">
+            <div class="navbar-hamburger-btn">
+                <div class="hamburger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <a class="navbar-brand scroll-action" href="#" data-href="#top">
+                <img src="{{asset('img/logo.jpg')}}" height="40" alt="">
+            </a>
+            <a href="tel:+7 908 983 8787" class="navbar-phone mobile-nav__phone-btn">
+                <i class="icon-mobile"></i>+7 908 983 8787</a>
         </div>
-        <a href="tel:+7 908 983 8787" class="mobile-nav__phone-btn"><i class="icon-mobile"></i>+7 908 983 8787</a>
         <div class="menu-wrapper">
             <ul class="mobile-menu list-unstyled">
                 <li class="nav-item scroll-action" data-href="#top">

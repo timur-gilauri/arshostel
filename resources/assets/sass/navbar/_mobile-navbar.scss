@@ -19,6 +19,22 @@ $navbarHeight: 60px;
     height: $navbarHeight;
     line-height: $navbarHeight;
     padding: 0 15px;
+    background-color: #0f1925 !important;
+    &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .navbar-brand {
+        margin: auto;
+      }
+      .navbar-hamburger-btn {
+        margin-right: auto;
+      }
+      .navbar-phone {
+        margin-left: auto;
+      }
+    }
   }
 
   .mobile-nav__phone-btn {
@@ -45,14 +61,18 @@ $navbarHeight: 60px;
       display: none;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
       .nav-item {
         height: 50px;
         line-height: 50px;
         padding: 0 15px;
-        border: 1px solid $border-color;
+        //border: 1px solid $border-color;
         font-size: 16px;
         cursor: pointer;
+        color: #fff !important;
+        background-color: #0f1925;
+        &:hover {
+          background-color: #192738;
+        }
         & + .nav-item {
           border-top: none;
         }
