@@ -112,6 +112,7 @@
 			if ($this->repo->save($entity)) {
 				
 				Cache::forget('rooms.all');
+				Cache::forget('gallery.all');
 				
 				session()->flash('message', 'Комната успешно сохранена');
 				
@@ -136,6 +137,7 @@
 			if ($this->repo->delete($item)) {
 				
 				Cache::forget('rooms.all');
+				Cache::forget('gallery.all');
 				
 				session()->flash('message', 'Комната удалена.');
 				

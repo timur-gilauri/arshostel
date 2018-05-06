@@ -45,6 +45,7 @@
 			'image' => [
 				'styles'        => [
 					'thumb' => '250x250',
+					'full'  => '1000x1000',
 				],
 				'relative_path' => '/room/:id_partition/:style/:filename',
 			],

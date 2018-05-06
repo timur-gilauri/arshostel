@@ -11,7 +11,7 @@
                 <div class="gallery owl-carousel owl-theme">
                     @foreach($galleryItems as $item)
                         <div class="item">
-                            <a href="{{$item->getImage()->url()}}"
+                            <a href="{{$item->getImage()->url('full')}}"
                                data-fancybox="gallery"
                                data-caption="{{$item->getTitle()}}">
                                 <img src="{{$item->getImage()->url('thumb')}}"

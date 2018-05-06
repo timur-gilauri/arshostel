@@ -10,7 +10,7 @@
                 <div class="owl-carousel owl-theme rooms">
                     @foreach($rooms as $room)
                         <div class="item">
-                            <a href="{{$room->getImage()->url()}}"
+                            <a href="{{$room->getImage()->url('full')}}"
                                class="rooms-item__image"
                                data-slider="rooms"
                                data-caption="{{$room->getTitle() . ' - ' . $room->getPrice() . '₽ / за ночь'}}">
@@ -27,15 +27,6 @@
                         </div>
                     @endforeach
                 </div>
-                {{--<div class="bx-controls">
-                    <div class="bx-controls-direction">
-                        <button type="button" class="btn btn-primary small-control bx-prev reviews-bx-prev">
-                            <i class="icon-arrow-left"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary small-control bx-next reviews-bx-next">
-                            <i class="icon-arrow-right"></i></button>
-                    </div>
-                </div>--}}
             </div>
         </div>
     </div>

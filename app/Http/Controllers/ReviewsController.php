@@ -5,6 +5,7 @@
 	use App\Entities\ReviewEntity;
 	use App\Repositories\ReviewsRepository;
 	use Illuminate\Http\Request;
+	use Illuminate\Support\Facades\Cache;
 	
 	class ReviewsController extends Controller
 	{
@@ -92,6 +93,9 @@
 			$entity->setContent($request->get('content'));
 			
 			if ($this->repo->save($entity)) {
+				
+				Cache::forget('reviews.all');
+				
 				session()->flash('message', 'Отзыв успешно сохранен');
 				
 				return redirect(route('admin::reviews::index'));
@@ -113,6 +117,8 @@
 				session()->flash('message', 'Отзыв с данным id не найден.');
 			}
 			if ($this->repo->delete($item)) {
+				Cache::forget('reviews.all');
+				
 				session()->flash('message', 'Отзыв удален.');
 				
 				return redirect(route('admin::reviews::index'), 301);
