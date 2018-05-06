@@ -8,6 +8,7 @@ window.addEventListener('load', function () {
         if (!form.get(0).reportValidity()) {
             return false;
         }
+        grecaptcha.execute();
         let data = form.serialize();
         let url = `${window.location.origin}/contact-request`;
 

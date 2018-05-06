@@ -12,7 +12,7 @@
 
                 <div id="contact-form-message" class="alert contact-form-message" role="alert"></div>
 
-                <form id="contacts-form" action="{{route('contacts')}}" method="post">
+                <form id="contacts-form">
                     {{csrf_field()}}
                     <div class="form-row form-group">
                         <div class="col-12 col-md-4">
@@ -63,7 +63,13 @@
                                   placeholder="Сообщение"></textarea>
                     </div>
                     <div class="row justify-content-center">
-                        <button id="submit-btn" type="button" class="button submit-button">Забронировать</button>
+                        <div id="recaptcha" class="g-recaptcha"
+                             data-sitekey="6Lfma1cUAAAAAL4SWXQSeFVBYiLz6MBObdMvuomz"
+                             data-size="invisible"></div>
+                        <button id="submit-btn"
+                                type="button"
+                                class="button submit-button">Забронировать
+                        </button>
                     </div>
                 </form>
             </div>
